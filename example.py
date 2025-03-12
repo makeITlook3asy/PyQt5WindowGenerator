@@ -24,8 +24,8 @@ def main(argv:list):
     # check out the README for more detailed informations
     window1 = QtWindow("Window 1","This is the first window.\nClick on 'Next' to continue.",button_count=1,buttons_textlabels=["Next"],abort_button=False)
     window2 = QtWindow("Window 2","Click 'Count to 10' to start two successive threads. Afterwards the new window will automatically.\nAlternatively click 'Next' to continue without executing the threads or 'Abort' to terminate the program",button_count=3,buttons_textlabels=["Count to 10","Next","Abort"])
-    window3 = QtWindow("Window 3","Check out this beautiful image.\nAfterwards click 'Next' to continue or press Enter to click the default button 'Next Default'",button_count=3,buttons_textlabels=["Next","Next Default","Abort"],image_count=1,image_paths=["./alley.jpg"],defaultButton="Next Default")
-    window4 = QtWindow("Window 4","As you can see each image has its own button now.\nClick on any button to start a thread which will count up.\nAfterwards the next window will be opened automatically.",button_count=5,buttons_per_row=2,buttons_textlabels=["Count to 5","Count to 10","Count to 15","Count to 20","Abort"],image_count=4,image_paths=["alley.jpg","alley.jpg","alley.jpg","alley.jpg"],img_button_connect=True,defaultButton="Count to 10")
+    window3 = QtWindow("Window 3","Check out this beautiful image.\nAfterwards click 'Next' to continue or press Enter to click the default button 'Next Default'",button_count=3,buttons_textlabels=["Next","Next Default","Abort"],image_count=1,image_paths=["./binary_test.png"],defaultButton="Next Default")
+    window4 = QtWindow("Window 4","As you can see each image has its own button now.\nClick on any button to start a thread which will count up.\nAfterwards the next window will be opened automatically.",button_count=5,buttons_per_row=2,buttons_textlabels=["Count to 5","Count to 10","Count to 15","Count to 20","Abort"],image_count=4,image_paths=["binary_test.png","binary_test.png","binary_test.png","binary_test.png"],img_button_connect=True,defaultButton="Count to 10")
     window5 = QtWindow("Window 5","Click 'Open Popup' to open a popup window.\nAfter closing the popup window click 'Next' to continue.",button_count=3,buttons_textlabels=["Open Popup","Next","Abort"],defaultButton="Open Popup")
     popupWindow = QtWindow("Popup Window","This is some important Message",button_count=1,buttons_textlabels=["Close"],abort_button=False,defaultButton="Close")
     window6 = QtWindow("Window 6","Type something in the Input Field and click 'Next' to output it to the terminal while opening the next window",button_count=2,buttons_textlabels=["Print Text","Abort"],input_field=True,nbr_of_input_fields=1)
@@ -132,4 +132,3 @@ def run_threads(threads:list[threading.Thread],window:QtWindow,sendFinish:bool=T
 if __name__ == "__main__":
     main(sys.argv)
 
-# alley.jpg von PublicDomainPictures (https://pixabay.com/de/photos/gasse-stra%C3%9Fe-nacht-abend-stadt-89197/)
